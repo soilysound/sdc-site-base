@@ -1,5 +1,6 @@
 # SDC Site base
 
+- [Build](#build)
 - [Folder Structure](#folder-structure)
 - [Head](#head)
   - [Meta data](#meta-data)  
@@ -72,10 +73,10 @@ The test is based on detection of two browser apis - page visibility and CSS.sup
 ## Support
 Browsers that do not pass the above test will not recieve site javascript and may thus lack some functionailty. However, the main text of each page should still be readable and there should be a basic, useable navigation.   
 
-Stats below are based on caniuse.com stats for UK.
+Stats below are based on caniuse.com figures for UK.
 
 #### Modern browser
-Browsers and devices listed here should enjoy full site functionality, javascript support and rich design. 
+Browsers and devices listed here should enjoy full site functionality, javascript support and design. 
 
 | Yes          | Support % |
 | :----------  | :------   |
@@ -94,7 +95,7 @@ Browsers and devices listed here should enjoy full site functionality, javascrip
 | ***total***  | 91.1      |
 
 #### Legacy browser
-Browsers and devices listed here will not recieve site javascript and will be missing some functionailty. All text should be viewable and basic navigation functional, but design and appearence may be basic and stripped back.
+Browsers and devices listed here will not recieve site javascript and will be missing some functionailty. All text should be viewable and basic navigation functional, but design and appearance may be basic and stripped back.
 
 | No           | Support % |
 | :----------  | :----     |
@@ -107,7 +108,7 @@ Browsers and devices listed here will not recieve site javascript and will be mi
 | ***total***  | 3.8       |
 
 ## Javascript
-Site javascript is written in require modules. Each major section of the site would have a bundled require module that involkes all the most commonely used modules for that section. For example, if 'module1', 'module2' and 'module3' are used throughout the site, a general 'site-main' bundle file might look like this:
+Site javascript is written in require modules. Each major section of the site has a bundled require module that invokes all the most commonely used modules for that section. For example, if 'module1', 'module2' and 'module3' are used throughout the site, a general 'site-main' bundle file might look like this:
 
 ```javascript
 define('site-main', ['module1', 'module2', 'module3'],
@@ -121,7 +122,7 @@ define('site-main', ['module1', 'module2', 'module3'],
     };
 });
 ```
-In development this file would require the raw modules, in production it and its dependent modules would be bundled together into one js file.
+In development this file would make require requests for the raw modules, in production it and its dependent modules would be bundled together into one js file.
 
 Two require config files exist to manage the file paths for the development version of each require module and the production version, and each page should be able to switch between the two environments seemlessly.
 
@@ -136,7 +137,7 @@ Two require config files exist to manage the file paths for the development vers
 <script src="/require-config-min.js"></script>
 ```
 ### Init site js
-If the site passes the cut the mustard supports test, we execute the site javascript as below. If we still need to run site js for legacy browser it can be called outside of the check below.
+If the site passes the modern browser support test described earlier, we execute the site javascript as below. If we still need to run some js for legacy browsers it can be called outside of the check below.
 
 ```html
 <script>
