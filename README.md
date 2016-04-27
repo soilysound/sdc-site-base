@@ -2,6 +2,24 @@
 
 ## Folder Structure
 
+* **js**  
+  site-main.js  
+  site-section.js
+  * **min**  
+    site-main.js  
+    site-section.js
+* **css**  
+  site-main.css  
+  site-section.css  
+  * **min**  
+    site-main.css  
+    site-section.css  
+* **scripts**  
+  build-scripts.sh
+
+package.json  
+require-config.js  
+require-config-min.js  
 
 ## Head
 
