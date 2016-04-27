@@ -1,6 +1,18 @@
 # SDC Site base
 
 - [Folder Structure](#folder-structure)
+- [Head](#head)
+  - [Meta data](#meta-data)  
+  - [CSS](#site-section-css-file)
+  - [JS](#head-javascript)
+- [Support](#support)
+  - [Modern](#modern-browser)
+  - [Legacy](#legacy-browser)
+- [Javascript](#javascript)
+  - [Initialize site javascript](#init-site-js) 
+  - [Load a component from javascript](#load-a-component-from-javascript)
+  - [Load a component from markup](#load-a-component-from-markup)
+- [Inlining static files](#inlining-static-files)
 
 ## Folder Structure
 
@@ -25,13 +37,13 @@ require-config-min.js
 
 ## Head
 
-### Meta, link and jsonp data (to be agreed with Spencer)
-Include schema.org jsonp object for Organization
+### Meta data
+Include schema.org jsonp object for Organization, link and meta data (from Spencer)
 
 ### Site section css file
 Include one bundled css file per major site section. Max unminified css size 100k.
 
-### One head.js file, inlined in production
+### Head javascript
 Include one small head js file, inlined during production. This file creates a global variable:
 
 ```javascript 
@@ -47,11 +59,13 @@ or:
 ```html
 <html class="js is-modern">
 ```
-The test is based on deetction of two browser apis - page visibility and CSS.supports. All modern browsers support one or both of these, whereas legacy browsers such as IE8, 9 and old android do not.
+The test is based on detection of two browser apis - page visibility and CSS.supports. All modern browsers support one or both of these, whereas legacy browsers such as IE8, 9 and old android do not.
 
 ## Support
 Browsers that do not pass the above test will not recieve site javascript and may thus lack some functionailty. However, the main text of each page should still be readable and there should be a basic, useable navigation.
 
+#### Modern browser
+Browsers and devices listed here should enjoy full site functionality, javascript support and rich design.
 
 | Yes          | Support % |
 | :----------  | :------   |
@@ -68,6 +82,9 @@ Browsers that do not pass the above test will not recieve site javascript and ma
 | other        | 2.18      |
 | ***total***  | 91.1      |
 
+#### Legacy browser
+Browsers and devices listed here will not recieve site javascript and will be missing some functionailty. All text should be viewable and basic navigation functional, but design and appearence may be basic and stripped back.
+
 | No           | Support % |
 | :----------  | :----     |
 | IE8          | 0.52      |
@@ -78,7 +95,7 @@ Browsers that do not pass the above test will not recieve site javascript and ma
 | Chrome-3<    | 0.9       |
 | Saf 6<       | 0.6       |
 | Opera Mini   | 1         |
-| ***total***  | 8.9       |
+| ***total***  | 5.9       |
 *Stats based on caniuse.com UK values
 
 ## Javascript
@@ -143,10 +160,10 @@ To declaratively call the above using html markup, add the components name as a 
 <div data-component-name="mycomponent" data-my-param-one="10" data-my-param-two="blue"></div>
 
 ```
-### Inlining static files
+## Inlining static files
 Css link tags or javascript script tags with the data-inline attribute should inline the contents of their source. If the data-inline attribute points to a source file, then the contents of that file should be inlined instead.
 
-#### Inline content of href into a ```<style>``` tag:
+### Inline content of href into a ```<style>``` tag:
 
 ```html
  <link rel="stylesheet" href="/css/site-main.css" data-inline>
@@ -157,7 +174,7 @@ Css link tags or javascript script tags with the data-inline attribute should in
  <style>/*i am the content of /css/site-main.css*/</style>
  ```
  
-#### Inline content of data-inline attribute into a ```<style>``` tag:
+### Inline content of data-inline attribute into a ```<style>``` tag:
 
 ```html
  <link rel="stylesheet" href="/css/site-main.css" data-inline="/css/min/site-main.css">
@@ -168,7 +185,7 @@ becomes:
  <style>/*i am the content of css/min/site-main.css*/</style>
  ```
  
-#### Inline content of src into a ```<script>``` tag:
+### Inline content of src into a ```<script>``` tag:
 
 ```html
  <script src="/js/site-main.js" data-inline></script>
@@ -179,7 +196,7 @@ becomes:
 <script>//i am the content of /js/site-main.js</script>
  ```
  
-#### Inline content of data-inline into a ```<script>``` tag:
+### Inline content of data-inline into a ```<script>``` tag:
 
 ```html
  <script src="/js/site-main.js" data-inline="/js/min/site-main.js"></script>
