@@ -1,5 +1,7 @@
 # SDC Site base
 
+- [Folder Structure](#folder-structure)
+
 ## Folder Structure
 
 * **js**  
