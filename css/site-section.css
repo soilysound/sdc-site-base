@@ -2,7 +2,7 @@
 /*=========*/
 
 /*sdc core*/
-@import "../node_modules/sdc-core/src/css/bundle.css";
+@import "../node_modules/sdc-site-core/css/bundle.css";
 
 /*components*/
-@import "../node_modules/sky-component-header/dist/css/component.css";
+/*@import "../node_modules/sky-component-header/dist/css/component.css";*/

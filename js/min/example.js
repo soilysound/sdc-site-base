@@ -1,1 +1,1 @@
-define("example",[],function(){return{init:function(n,e){n.style.cssText="background:hotpink"}}});
+define("example",[],function(){return{init:function(n,t){n.style.cssText="background:hotpink",n.textContent=t.myParam}}});

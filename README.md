@@ -14,6 +14,12 @@
   - [Load a component from markup](#load-a-component-from-markup)
 - [Inlining static files](#inlining-static-files)
 
+## Build
+
+```javascript
+npm run compile
+```
+
 ## Folder Structure
 
 * **js**  
@@ -29,7 +35,9 @@
     site-main.css  
     site-section.css  
 * **scripts**  
-  build-scripts.sh
+  compile.sh  
+  build-css.js  
+  build-js.js  
 
 package.json  
 require-config.js  

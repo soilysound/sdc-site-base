@@ -16,9 +16,12 @@
     "postcss-simple-vars": "~1.2.0",
     "requirejs": "~2.2.0"
   },
+  "dependencies": {
+    "sdc-site-core": "git+ssh://git@github.com/soilysound/sdc-site-core.git#master"
+  },
   "repository": {
     "type": "git",
-    "url": "gitlab@git.bskyb.com:mark.groak/sky-component-skeleton.git"
+    "url": "git@github.com:soilysound/sdc-site-base.git"
   },
   "author": "",
   "license": "BSD-2-Clause"
