@@ -1,5 +1,11 @@
 # SDC Site base
 
+- [Folder Structure](#folder-structure)
+- [Head](#head)
+  - [Meta data](#meta-data)  
+  - [CSS](#site-section-css-file)
+  - [JS](#head-javascript)
+
 ## Folder Structure
 
 * **js**  
@@ -23,13 +29,13 @@ require-config-min.js
 
 ## Head
 
-### Meta, link and jsonp data (to be agreed with Spencer)
-Include schema.org jsonp object for Organization
+### Meta data
+Include schema.org jsonp object for Organization, link and meta data (from Spencer)
 
 ### Site section css file
 Include one bundled css file per major site section. Max unminified css size 100k.
 
-### One head.js file, inlined in production
+### Head javascript
 Include one small head js file, inlined during production. This file creates a global variable:
 
 ```javascript 
