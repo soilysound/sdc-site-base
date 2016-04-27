@@ -64,7 +64,7 @@ The test is based on detection of two browser apis - page visibility and CSS.sup
 ## Support
 Browsers that do not pass the above test will not recieve site javascript and may thus lack some functionailty. However, the main text of each page should still be readable and there should be a basic, useable navigation.
 
-#### Full support
+#### Modern browser
 
 | Yes          | Support % |
 | :----------  | :------   |
@@ -81,7 +81,7 @@ Browsers that do not pass the above test will not recieve site javascript and ma
 | other        | 2.18      |
 | ***total***  | 91.1      |
 
-#### Basic support (no javascript)
+#### Legacy browser (no javascript)
 
 | No           | Support % |
 | :----------  | :----     |
