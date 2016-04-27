@@ -95,7 +95,7 @@ Browsers and devices listed here will not recieve site javascript and will be mi
 | Chrome-3<    | 0.9       |
 | Saf 6<       | 0.6       |
 | Opera Mini   | 1         |
-| ***total***  | 8.9       |
+| ***total***  | 5.9       |
 *Stats based on caniuse.com UK values
 
 ## Javascript
