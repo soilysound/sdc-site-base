@@ -6,8 +6,8 @@
   - [CSS](#site-section-css-file)
   - [JS](#head-javascript)
 - [Support](#support)
-  - [Full](#full-support)
-  - [Basic](#basic-support)
+  - [Modern](#modern-browser)
+  - [Legacy](#legacy-browser)
 - [Javascript](#javascript)
   - [Initialize site javascript](#init-site-js) 
   - [Load a component from javascript](#load-a-component-from-javascript)
@@ -65,6 +65,7 @@ The test is based on detection of two browser apis - page visibility and CSS.sup
 Browsers that do not pass the above test will not recieve site javascript and may thus lack some functionailty. However, the main text of each page should still be readable and there should be a basic, useable navigation.
 
 #### Modern browser
+Browsers and devices listed here should enjoy full site functionality, javascript support and rich design.
 
 | Yes          | Support % |
 | :----------  | :------   |
@@ -81,7 +82,8 @@ Browsers that do not pass the above test will not recieve site javascript and ma
 | other        | 2.18      |
 | ***total***  | 91.1      |
 
-#### Legacy browser (no javascript)
+#### Legacy browser
+Browsers and devices listed here will not recieve site javascript and will be missing some functionailty. All text should be viewable and basic navigation functional, but design and appearence may be basic and stripped back.
 
 | No           | Support % |
 | :----------  | :----     |
