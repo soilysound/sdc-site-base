@@ -1,0 +1,25 @@
+{
+  "name": "sdc-base",
+  "version": "0.0.0",
+  "description": "A base site skeleton for sdc page development",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sh ./scripts/compile.sh",
+    "start": "http-server example",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "postcss": "~5.0.19",
+    "postcss-import": "~8.1.0",
+    "es6-promise": "~3.1.2",
+    "cssnano": "~3.5.2",
+    "postcss-simple-vars": "~1.2.0",
+    "requirejs": "~2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gitlab@git.bskyb.com:mark.groak/sky-component-skeleton.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}

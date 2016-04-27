@@ -1,0 +1,1 @@
+define("example",[],function(){return{init:function(n,e){n.style.cssText="background:hotpink"}}});
