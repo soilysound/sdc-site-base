@@ -5,6 +5,14 @@
   - [Meta data](#meta-data)  
   - [CSS](#site-section-css-file)
   - [JS](#head-javascript)
+- [Support](#support)
+  - [Full](#full-support)
+  - [Basic](#basic-support)
+- [Javascript](#javascript)
+  - [Initialize site javascript](#init-site-js) 
+  - [Load a component from javascript](#load-a-component-from-javascript)
+  - [Load a component from markup](#load-a-component-from-markup)
+- [Inlining static files](#inlining-static-files)
 
 ## Folder Structure
 
@@ -51,11 +59,12 @@ or:
 ```html
 <html class="js is-modern">
 ```
-The test is based on deetction of two browser apis - page visibility and CSS.supports. All modern browsers support one or both of these, whereas legacy browsers such as IE8, 9 and old android do not.
+The test is based on detection of two browser apis - page visibility and CSS.supports. All modern browsers support one or both of these, whereas legacy browsers such as IE8, 9 and old android do not.
 
 ## Support
 Browsers that do not pass the above test will not recieve site javascript and may thus lack some functionailty. However, the main text of each page should still be readable and there should be a basic, useable navigation.
 
+#### Full support
 
 | Yes          | Support % |
 | :----------  | :------   |
@@ -71,6 +80,8 @@ Browsers that do not pass the above test will not recieve site javascript and ma
 | Opera-2+     | 0.62      |
 | other        | 2.18      |
 | ***total***  | 91.1      |
+
+#### Basic support (no javascript)
 
 | No           | Support % |
 | :----------  | :----     |
@@ -147,10 +158,10 @@ To declaratively call the above using html markup, add the components name as a 
 <div data-component-name="mycomponent" data-my-param-one="10" data-my-param-two="blue"></div>
 
 ```
-### Inlining static files
+## Inlining static files
 Css link tags or javascript script tags with the data-inline attribute should inline the contents of their source. If the data-inline attribute points to a source file, then the contents of that file should be inlined instead.
 
-#### Inline content of href into a ```<style>``` tag:
+### Inline content of href into a ```<style>``` tag:
 
 ```html
  <link rel="stylesheet" href="/css/site-main.css" data-inline>
@@ -161,7 +172,7 @@ Css link tags or javascript script tags with the data-inline attribute should in
  <style>/*i am the content of /css/site-main.css*/</style>
  ```
  
-#### Inline content of data-inline attribute into a ```<style>``` tag:
+### Inline content of data-inline attribute into a ```<style>``` tag:
 
 ```html
  <link rel="stylesheet" href="/css/site-main.css" data-inline="/css/min/site-main.css">
@@ -172,7 +183,7 @@ becomes:
  <style>/*i am the content of css/min/site-main.css*/</style>
  ```
  
-#### Inline content of src into a ```<script>``` tag:
+### Inline content of src into a ```<script>``` tag:
 
 ```html
  <script src="/js/site-main.js" data-inline></script>
@@ -183,7 +194,7 @@ becomes:
 <script>//i am the content of /js/site-main.js</script>
  ```
  
-#### Inline content of data-inline into a ```<script>``` tag:
+### Inline content of data-inline into a ```<script>``` tag:
 
 ```html
  <script src="/js/site-main.js" data-inline="/js/min/site-main.js"></script>
