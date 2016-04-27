@@ -62,24 +62,27 @@ or:
 The test is based on detection of two browser apis - page visibility and CSS.supports. All modern browsers support one or both of these, whereas legacy browsers such as IE8, 9 and old android do not.
 
 ## Support
-Browsers that do not pass the above test will not recieve site javascript and may thus lack some functionailty. However, the main text of each page should still be readable and there should be a basic, useable navigation.
+Browsers that do not pass the above test will not recieve site javascript and may thus lack some functionailty. However, the main text of each page should still be readable and there should be a basic, useable navigation.   
+
+Stats below are based on caniuse.com stats for UK.
 
 #### Modern browser
-Browsers and devices listed here should enjoy full site functionality, javascript support and rich design.
+Browsers and devices listed here should enjoy full site functionality, javascript support and rich design. 
 
 | Yes          | Support % |
 | :----------  | :------   |
-| IE10         | 0.51      |
+| IE10         | 0.5       |
 | IE11         | 7.9       | 
 | Edge         | 2.7       |
 | IE Mob 10+   | 1.0       |
-| And 4.4+     | 14.2      |
-| IOS 7+       | 22.7      |
-| FF-10+       | 7.1       |
-| Chrome-10+   | 27.9      |
-| Saf 7+       | 4.2       |
-| Opera-2+     | 0.62      |
-| other        | 2.18      |
+| IOS 7+       | 22.8      |
+| Android 4.4  | 2.2       |
+| Firefox      | 7.2       |
+| Chrome       | 27.8      |
+| Chrome And   | 12.1      |
+| Saf 7+       | 4.3       |
+| Opera        | 0.6       |
+| Other        | 2.1       |
 | ***total***  | 91.1      |
 
 #### Legacy browser
@@ -87,16 +90,13 @@ Browsers and devices listed here will not recieve site javascript and will be mi
 
 | No           | Support % |
 | :----------  | :----     |
-| IE8          | 0.52      |
+| IE8          | 0.5       |
 | IE9          | 0.6       |
-| And 4.3<     | 1.9       |
-| IOS 6<       | 0.1       |
-| FF-3<        | 0.3       |
-| Chrome-3<    | 0.9       |
-| Saf 6<       | 0.6       |
-| Opera Mini   | 1         |
-| ***total***  | 5.9       |
-*Stats based on caniuse.com UK values
+| And 4.3<     | 1.1       |
+| Opera Mini   | 0.9       |
+| IOS <7       | 0.1       |
+| Saf <7       | 0.6       |
+| ***total***  | 3.8       |
 
 ## Javascript
 Site javascript is written in require modules. Each major section of the site would have a bundled require module that involkes all the most commonely used modules for that section. For example, if 'module1', 'module2' and 'module3' are used throughout the site, a general 'site-main' bundle file might look like this:
