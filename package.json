@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "sh ./scripts/compile.sh",
-    "start": "http-server example",
+    "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -17,7 +17,7 @@
     "requirejs": "~2.2.0"
   },
   "dependencies": {
-    "sdc-site-core": "git+ssh://git@github.com/soilysound/sdc-site-core.git#master"
+    
   },
   "repository": {
     "type": "git",

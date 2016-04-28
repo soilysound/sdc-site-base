@@ -40,14 +40,40 @@ npm run compile
   build-css.js  
   build-js.js  
 
-package.json  
+index.html
 require-config.js  
-require-config-min.js  
+require-config-min.js
+package.json  
 
 ## Head
 
 ### Meta data
-Include schema.org jsonp object for Organization, link and meta data (from Spencer)
+Include schema.org jsonp object for Organization, link and meta data.
+
+```html
+  <script data-schema="Organization" type="application/ld+json">
+    {
+      "name":"Sky Sports",
+      "url":"http://www.skysports.com/",
+      "logo":"/img/site-logo.png",
+      "sameAs":[
+        "https://www.facebook.com/skysports",
+        "https://twitter.com/skysports",
+        "https://www.youtube.com/user/skysportsofficial"
+      ],
+      "@type":"Organization",
+      "@context":"http://schema.org"
+    }
+  </script> 
+
+  <script data-schema="WebPage" type="application/ld+json">
+    {
+      "@id":"http://www.skysports.com/",
+      "@type":"WebPage",
+      "@context":"http://schema.org"
+    }
+  </script>
+```
 
 ### Site section css file
 Include one bundled css file per major site section. Max unminified css size 100k.
